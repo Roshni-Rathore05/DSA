@@ -15,12 +15,17 @@ Input: num = 1248
 Output: 4
 Explanation: 1248 is divisible by all of its digits, hence the answer is 4.'''
 
-      def countDigits(self, num: int) -> int:
-        count=0
-        n=num
-        while num>0:
-            digit=num%10
-            if n%digit==0:
-                count+=1
-            num=num//10
-        return count
+
+# iterative approch 
+# TC O(log10(num))    because of num//10
+# SC O(1)             because of n, count
+def countDigits(n: int) -> int:
+    count=0
+    num=n
+    while n>0:
+        digit=n%10
+        if digit !=0 and num%digit==0:
+            count+=1
+        n=n//10
+    return count
+
