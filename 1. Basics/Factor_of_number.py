@@ -7,6 +7,25 @@ Input: n = 25
 Output: 3
 Explanation: 25 has 3 factors 1, 5, 25 
 
+brute force:
+n=15
+l=[]
+for i in range(1,n):
+    if n%i==0:
+        l.append(i)
+print(l)
+
+better solution:
+
+n=15
+l=[]
+for i in range(1,n//2):
+    if n%i==0:
+        l.append(i)
+print(l)
+
+
+Optimal solution:
 from math import sqrt
 class Solution:
     def countFactors (self, n):
