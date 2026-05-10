@@ -1,0 +1,29 @@
+Brute force
+
+def GCD(self, n1, n2):  
+        gcd=1
+        m=min(n1,n2)
+        for i in range(1,m+1):
+            if (n1%i==0) and (n2%i==0):
+                gcd=i
+        return gcd
+
+better solution
+
+def GCD(self, n1, n2):  
+        gcd=1
+        m=min(n1,n2)
+        for i in range(m,0,-1):
+            if (n1%i==0) and (n2%i==0):
+                gcd=i
+        return gcd
+
+optimal solution:
+O(log(min(a,b)))
+
+def GCD(self, n1, n2): 
+        while n2 1=0:
+            n1,n2=n2,n1%n2
+        return n1
+
+
